@@ -1,8 +1,10 @@
-import os
+from flask import Flask
 
-def main():
-    print("Welcome to ChainPulse AI!")
-    # Add your logic here
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Welcome to ChainPulse AI!"
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)
